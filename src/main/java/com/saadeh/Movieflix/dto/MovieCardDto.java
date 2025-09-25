@@ -7,7 +7,10 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class GenreDto {
+public class MovieCardDto {
     private Long id;
-    private String name;
+    private String title;
+    private String subTitle;
+    private Integer year;
+    private String imgUrl;
 }

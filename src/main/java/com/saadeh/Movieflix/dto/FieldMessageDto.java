@@ -1,13 +1,15 @@
 package com.saadeh.Movieflix.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
-public class GenreDto {
-    private Long id;
-    private String name;
+public class FieldMessageDto {
+    private String fieldName;
+    private String message;
 }
