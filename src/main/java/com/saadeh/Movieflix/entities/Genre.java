@@ -3,6 +3,9 @@ package com.saadeh.Movieflix.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.HashSet;
+import java.util.Set;
+
 @Entity
 @Table(name = "tb_genre")
 @AllArgsConstructor
@@ -16,4 +19,7 @@ public class Genre {
     @EqualsAndHashCode.Include
     private Long id;
     private String name;
+
+    @OneToMany(mappedBy = "genre")
+    private Set<Movie> movies = new HashSet<>();
 }
