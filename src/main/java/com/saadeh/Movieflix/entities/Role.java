@@ -2,6 +2,7 @@ package com.saadeh.Movieflix.entities;
 
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
 
 @Entity
 @Table(name = "tb_role")
@@ -10,7 +11,7 @@ import lombok.*;
 @Getter
 @Setter
 @EqualsAndHashCode
-public class Role {
+public class Role implements GrantedAuthority {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include

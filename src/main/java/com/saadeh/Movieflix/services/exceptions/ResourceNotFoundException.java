@@ -1,4 +1,4 @@
-package com.saadeh.Movieflix.services.exception;
+package com.saadeh.Movieflix.services.exceptions;
 
 public class ResourceNotFoundException extends RuntimeException {
     public ResourceNotFoundException(String message) {

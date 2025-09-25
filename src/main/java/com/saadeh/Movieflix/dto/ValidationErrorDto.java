@@ -9,7 +9,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @Getter
-public class ValidationDto extends StandardErrorDto {
+public class ValidationErrorDto extends StandardErrorDto {
  private List<FieldMessageDto> errors = new ArrayList<>();
 
  public void addError(String fieldName, String message){
