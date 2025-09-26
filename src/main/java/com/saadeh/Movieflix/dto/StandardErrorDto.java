@@ -1,5 +1,6 @@
 package com.saadeh.Movieflix.dto;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -7,6 +8,7 @@ import lombok.Setter;
 import java.time.Instant;
 
 @NoArgsConstructor
+@AllArgsConstructor
 @Getter
 @Setter
 public class StandardErrorDto {
