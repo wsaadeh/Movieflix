@@ -3,12 +3,14 @@ package com.saadeh.Movieflix.dto;
 
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @NoArgsConstructor
 @Getter
+@Setter
 public class ValidationErrorDto extends StandardErrorDto {
  private List<FieldMessageDto> errors = new ArrayList<>();
 
