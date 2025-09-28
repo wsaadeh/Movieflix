@@ -16,7 +16,7 @@ public class ReviewDto {
     private String text;
 
     @NotBlank(message = "Field Required")
-    private Movie movieId;
+    private Long movieId;
 
     private Long userId;
     private String userName;
