@@ -3,6 +3,7 @@ package com.saadeh.Movieflix.dto;
 import com.saadeh.Movieflix.entities.Movie;
 import com.saadeh.Movieflix.entities.Review;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -18,7 +19,7 @@ public class ReviewDto {
     @NotBlank(message = "Field Required")
     private String text;
 
-    @NotBlank(message = "Field Required")
+    @NotNull(message = "Field Required")
     private Long movieId;
 
     private Long userId;
