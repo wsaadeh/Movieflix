@@ -19,11 +19,15 @@ public class MovieService {
     private MovieRepository repository;
 
     @Transactional(readOnly = true)
-    public Page<MovieCardDto> findAllPaged(Pageable pageable){
+    public Page<MovieCardDto> findAllPaged(Long genreId, Pageable pageable){
         if (pageable.getSort().isEmpty()){
             pageable = PageRequest.of(pageable.getPageNumber(),pageable.getPageSize(),Sort.by("title").ascending());
         }
-        return repository.findAll(pageable).map(MovieCardDto::new);
+        if (genreId == 0) {
+            return repository.findAll(pageable).map(MovieCardDto::new);
+        }else {
+            return repository.searchAll(genreId, pageable);
+        }
     }
 
     @Transactional(readOnly = true)
